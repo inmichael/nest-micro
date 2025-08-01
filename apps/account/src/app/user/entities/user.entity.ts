@@ -1,4 +1,4 @@
-import { IUser, UserRole } from '@org/interfaces';
+import { IUser, UserRole } from '@nest-micro/interfaces';
 import { compare, genSalt, hash } from 'bcryptjs';
 
 export class UserEntity implements IUser {

@@ -1,5 +1,5 @@
 import { Document } from 'mongoose';
-import { IUser, UserRole } from '@org/interfaces';
+import { IUser, UserRole } from '@nest-micro/interfaces';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 
 @Schema()

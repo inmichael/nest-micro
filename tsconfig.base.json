@@ -15,8 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@org/contracts": ["libs/contracts/src/index.ts"],
-      "@org/interfaces": ["libs/interfaces/src/index.ts"]
+      "@nest-micro/contracts": ["libs/contracts/src/index.ts"],
+      "@nest-micro/interfaces": ["libs/interfaces/src/index.ts"]
     },
     "strictPropertyInitialization": false
   },

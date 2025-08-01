@@ -1,9 +1,9 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { UserRepository } from '../user/repositories/user.repository';
 import { UserEntity } from '../user/entities/user.entity';
-import { UserRole } from '@org/interfaces';
+import { UserRole } from '@nest-micro/interfaces';
 import { JwtService } from '@nestjs/jwt';
-import { AccountRegister } from '@org/contracts';
+import { AccountRegister } from '@nest-micro/contracts';
 
 @Injectable()
 export class AuthService {

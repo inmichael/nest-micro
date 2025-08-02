@@ -13,7 +13,7 @@ export class AuthService {
   ) {}
 
   async register({ email, password, displayName }: AccountRegister.Request) {
-    const oldUser = await this.userRepository.findUser(email);
+    const oldUser = await this.userRepository.findUserByEmail(email);
 
     if (oldUser) {
       throw new BadRequestException('Такой пользователь уже зарегистрирован');
@@ -32,13 +32,12 @@ export class AuthService {
   }
 
   async validateUser(email: string, password: string) {
-    const user = await this.userRepository.findUser(email);
+    const user = await this.userRepository.findUserByEmail(email);
 
     if (!user) {
       throw new BadRequestException('Неверный логин или пароль');
     }
 
-    // @ts-ignore
     const userEntity = new UserEntity(user);
     const isCorrectPassword = await userEntity.validatePassword(password);
 

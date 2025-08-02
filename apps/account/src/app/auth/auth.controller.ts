@@ -22,7 +22,6 @@ export class AuthController {
   ): Promise<AccountLogin.Response> {
     const { id } = await this.authService.validateUser(email, password);
 
-    // @ts-ignore
     return this.authService.login(id);
   }
 }
